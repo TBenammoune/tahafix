@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-image: url('youcode_safi.png');
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height: 480px;
+    margin-top: 64px;
+}
+
+.table1{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    padding-top: 21px;
+    display: flex;
+    padding: 15px;
+    position: relative;
+    left: 260px;
+    display: block;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(0, 122, 255);
+}
+.menu{
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    height:70px;
+    width: 100%;
+    position:fixed;
+    top:0;
+}
+.image1{
+    margin-left: 60px;
+    margin-right: 80px; 
+    padding-top: 10px;
+    float: left;
+    
+
+}
+
+td{
+    padding-right: 30px;
+}
+
+.btnInscription{
+    color:white;
+    background-color: #008AFF;
+    border-radius: 20px;
+    height:40px;
+    width: 160px;
+    border: none;
+    box-shadow: 0px 0px 35px -6px rgb(104, 168, 221);
+}
+
+.btnInscription:hover{
+    color:rgb(55, 109, 226);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    height:40px;
+    width: 160px;
+    border: none;
+    box-shadow: 0px 0px 35px -6px rgb(104, 168, 221);
+}
+.Class11{
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+.Class11  
+{
+    padding-top:35px;
+}
+.Class12 
+{
+    padding-top:80px;
+}
+#codeBlue{
+ color: rgb(0, 122, 255);   
+}
+.Class12{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Microsoft YaHei UI';
+    
+    padding-top: 120px;
+}
+#b2{
+    font-size: 15px;
+    margin-top: 70px;
+    margin-left: 600px;
+    color:white;
+    border-radius: 30px;
+    height:50px;
+    width: 220px;
+    border : none;
+    background-color: #008AFF;
+    box-shadow: 0px 0px 35px -6px rgb(104, 168, 221);
+    display: inline;
+}
+#b2:hover{
+    font-size: 15px;
+    margin-top: 70px;
+    margin-left: 600px;
+    color: rgb(87, 78, 78);
+    border-radius: 30px;
+    height:50px;
+    width: 220px;
+    border : none;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 35px -6px rgb(104, 168, 221);
+    display: inline;
+}
+.safi1{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 75px;
+    padding-top: 60px;
+}
+.safi2{
+    font-family: 'Montserrat';
+    text-align: center; 
+    margin-top: 20px;
+    
+}
+.Salle1{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    margin-top: 90px;
+    font-size: 35px;
+}
+.SR{
+    margin-left: 90px;
+    margin-top: 60px;
+    float: left;
+}
+.AG{
+    margin-top: 160px;
+    text-align: center;
+    font-size: 37px;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    color: rgb(27, 24, 24);
+}
+.Salle2{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    margin-top: 250px;
+    font-size: 35px;
+}
+.AGORA1{
+    float: right;
+    margin-right: 90px;
+    margin-top: 60px;
+}
+.AG2{
+    margin-top: 160px;
+    text-align: center;
+    font-size: 37px;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    color: rgb(27, 24, 24);
+}
+.Salle3{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    margin-top: 150px;
+    font-size: 35px;
+}
+.espace{
+    float: left;
+    margin-left:90px ;
+    margin-top:60px ;
+}
+.AG3{
+    margin-top: 160px;
+    text-align: center;
+    font-size: 37px;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    color: rgb(27, 24, 24);
+}
+.Salle4{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    margin-top: 100px;
+    font-size: 35px;
+}
+.espace2{
+    float: right;
+    margin-right: 90px;
+    margin-top: 60px;
+}
+.AG4{
+    margin-top: 130px;
+    text-align: center;
+    font-size: 37px;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    color: rgb(27, 24, 24);
+}
+
+.table3{
+    width:100%;
+     text-align:center;
+      margin-top:220px;
+}
+
+.btnins2{
+    color:white;
+    background-color: #008AFF;
+    border-radius: 20px;
+    height:40px;
+    width: 600px;
+    border: none;
+    box-shadow: 0px 0px 35px -6px rgb(104, 168, 221);
+    margin-right: -140px;
+
+
+}
+
+.btnins2:hover{
+    color:black;
+    background-color: white;
+    border-radius: 20px;
+    height:40px;
+    width: 600px;
+    border: none;
+    box-shadow: 0px 0px 35px -6px rgb(104, 168, 221);
+    margin-right: -140px;
+    
+
+}
+
+.inscri{
+    text-align: center;
+    font-family: montserrat;
+    font-size: 30px;
+}
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    margin-top:60px;
+  
+}
+
+.table4{
+    color: #666666;
+    text-align: right;
+    width: 100%; 
+    font-family: montserrat;
+    letter-spacing: 0.08em;
+}
+
+.fix{
+    float:right;
+  
+}
+.fix img{
+    padding:7px;
+  
+}
+
+.MALI{
+    margin-right: -50px;
+}
+.YY{
+    color:rgb(41, 122, 230);
+    padding-left: 20px;
+}
+
+.contact{
+    float:left;
+}

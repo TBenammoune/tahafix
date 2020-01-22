@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    /* background-color: #bbb; */
+  }
+  
+  a {
+    color: white;
+  }
+  
+  /* header */
+  
+  .header {
+    background-color: black;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+  }
+  
+  .header ul {
+    margin: 0;
+    margin-top: 8px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: black;
+    font-size: 13px;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    color: #688095;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .nav-icon:before,
+  .header .menu-icon .nav-icon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .nav-icon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .nav-icon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 440px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+
+  @media (min-width: 890px) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+      margin-right: 50px;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+
+  .container{
+    background-image: url('img/buildings.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    z-index: -1;
+   }
+
+   .Gall{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80px;
+    color: white;
+    /* padding-top: 4%; */
+   }
+
+   .Gall1{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    padding-top: 4%;
+   }
+
+   .imgbox1{
+       width: 100%;
+   }
+
+   h1{
+text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 26px;
+font-weight: lighter;
+}
+
+    h2{
+    text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 26px;
+font-weight: normal;
+color: #F11717;
+}
+
+    h3{
+        border: solid 1px #E5E5E5;
+        border-radius: 10px;
+        text-align: center;
+        width: 26%;
+        margin-left: 37%;
+        background-color: #E5E5E5;
+        color: #F11717;
+    }
+
+   .Box{
+       border: solid 1px gray;
+       width: 30%;
+   }
+   .BigOne{
+       display: flex;
+       justify-content: space-around;
+       width: 100%;
+       z-index: 1;
+       margin-top: -25%;
+   }
+
+    .blank{
+        height: 80px;
+    }
+
+    .BigOne2{
+        display: flex;
+       justify-content: space-around;
+       width: 100%;
+    }
+
+    .divl {
+        height: 160px;
+        background-image: url(img/NoPath.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        margin-top: 30px;
+      }
+      .divl div:nth-of-type(1) {
+        text-align: center;
+      }
+      .divl div:nth-of-type(1) h1 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .divl div:nth-of-type(1) input {
+        width: 460px;
+        height: 40px;
+        margin-left: 230px;
+      }
+      .divl div:nth-of-type(1) button {
+        width: 200px;
+        height: 40px;
+        background-color: #C49D48;
+        border: none;
+        color: white;
+        font-size: 18px;
+      }
+
+      .divsfooter {
+
+        width: 100%;
+      
+       z-index: 0;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+      
+      }
+      .divsfooter div {
+        width: 30%;
+        height: 100%;
+        text-align: center;
+      }
+      
+      .chfooter {
+        display: flex;
+        background-color: #000;
+        color: #CCCCCC;
+        justify-content: space-between;
+        z-index: 0;
+      }
+
+      #dfooter3 h1{
+          color: #688095;
+      }
+
+      #dfooter4 h1{
+        color: #688095;
+    }
+
+    #dfooter3 p{
+        color: #AAA9A9;
+    }
+
+    #dfooter1 p{
+        color: #AAA9A9;
+    }
+
+    #dfooter4 p{
+        color: #AAA9A9;
+    }
+
+    @media (max-width: 817px){
+        .divmove{
+            position: absolute;
+            width: 90%;
+            height: 57px;
+            margin-left: 0px;
+            left: 15%;
+        }
+      }
+      
+      @media (max-width: 915px){
+        .divl div:nth-of-type(1) input {
+          width: 38%;
+          height: 40px;
+          margin-left: 60px;
+        }
+        .divsfooter div:nth-of-type(1) P {
+          left: -50%;
+        }
+        .divsfooter div:nth-of-type(1) P {
+          left: -50%;
+      
+      }
+
+      @media (max-width: 749px){
+      .BigOne{
+          flex-direction: column;
+          align-items: center;
+   
+     }  
+      .BigOne2{
+          flex-direction: column;
+          align-items: center; 
+      }
+
+      .Box{
+          width: 70%;
+          margin: 3%;
+      }
+
+      .Gall {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 50px;
+        color: white;
+        float: none;
+        padding-top: 6%;
+    }
+
+      }

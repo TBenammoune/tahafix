@@ -95,7 +95,7 @@ header .active, header a:hover {
     font-size: 40px;
     position: absolute;
     right: 27px;
-    top: 38px;
+    top: 87px;
   }
   nav {
     display: block;
@@ -349,9 +349,7 @@ h2.heading {
 .controls input[type="number"],
 .controls input[type="date"],
 .controls input[type="tel"],
-.controls textarea,
-.controls button,
-.controls select {
+.controls textarea, .controls button, .controls select {
   padding: 12px;
   font-size: 14px;
   border: 1px solid #c6c6c6;
@@ -376,32 +374,9 @@ h2.heading {
 .controls input[type="tel"]:focus,
 .controls input[type="tel"]:hover,
 .controls textarea:focus,
-.controls textarea:hover,
-.controls button:focus,
-.controls button:hover,
-.controls select:focus,
-.controls select:hover {
+.controls textarea:hover, .controls button:focus, .controls button:hover, .controls select:focus, .controls select:hover {
   outline: none;
   border-color: #9FB1C1;
-}
-
-.controls input[type="text"]:focus + label, .controls input[type="text"]:hover + label,
-.controls input[type="email"]:focus + label,
-.controls input[type="email"]:hover + label,
-.controls input[type="number"]:focus + label,
-.controls input[type="number"]:hover + label,
-.controls input[type="date"]:focus + label,
-.controls input[type="date"]:hover + label,
-.controls input[type="tel"]:focus + label,
-.controls input[type="tel"]:hover + label,
-.controls textarea:focus + label,
-.controls textarea:hover + label,
-.controls button:focus + label,
-.controls button:hover + label,
-.controls select:focus + label,
-.controls select:hover + label {
-  color: #bdcc00;
-  cursor: text;
 }
 
 .controls .fa-sort {
@@ -414,29 +389,6 @@ h2.heading {
 .controls select {
   text-decoration: none;
   cursor: pointer;
-}
-
-.controls label {
-  position: absolute;
-  left: 8px;
-  top: 12px;
-  width: 60%;
-  color: #999;
-  font-size: 16px;
-  display: inline-block;
-  padding: 4px 10px;
-  font-weight: 400;
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-transition: color 0.3s, top 0.3s, background-color 0.8s;
-  transition: color 0.3s, top 0.3s, background-color 0.8s;
-  background-color: white;
-}
-
-.controls label.active {
-  top: -11px;
-  color: #555;
-  background-color: white;
-  width: auto;
 }
 
 .controls textarea {
@@ -467,7 +419,6 @@ button:hover {
 }
 
 .grid:after {
-  /* Or @extend clearfix */
   content: "";
   display: table;
   clear: both;

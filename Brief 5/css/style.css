@@ -95,7 +95,7 @@ header .active, header a:hover {
     font-size: 40px;
     position: absolute;
     right: 27px;
-    top: 38px;
+    top: auto;
   }
   nav {
     display: block;
@@ -130,9 +130,16 @@ img {
   border: none;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   .links {
-    bottom: 120px;
+    bottom: 300px;
+    padding: 8px 15px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1535px) {
+  .links {
+    bottom: 250px;
     padding: 8px 15px;
   }
 }

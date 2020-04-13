@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-class">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">YouCar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#"
+                >Acceuil<span class="sr-only">(current)</span></a
+              >
+              <a class="nav-item nav-link" href="#">Notre voitures</a>
+              <a class="nav-item nav-link" href="#">Réservetion</a>
+              <a class="nav-item nav-link" href="#">Contactez-nouz</a>
+              <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header-class">
+        <h1>YouCar <span>location de voitures</span></h1>
+      </div>
+    </header>
+    <div class="blank"></div>
+    <aside>
+      <div class="voitures-class">
+        <div class="voitures-class-title">
+          <h1>Notre voitures</h1>
+          <div class="bar-title"></div>
+        </div>
+      </div>
+      <div class="blank"></div>
+      <div class="notre-voitures">
+        <%if (json.length > 0) {%> <%for(i in json) {%>
+        <div class="produit">
+          <div class="produit-bar1">
+            <img src="img/<%= json[i].name%>.png" alt="">
+          </div>
+          <div class="produit-bar2">
+            <h1><%= json[i].name%></h1>
+            <h2>Carburant: <span><%= json[i].carburant%></span></h2>
+            <h2>Climatisation: <span><%= json[i].climatisation%></span></h2>
+            <h2>Prix : <span><%= json[i].price%> DH</span></h2>
+            <button class="buton">
+              <a href="/delete/<%=json[i].id%>">Supprimer</a>
+            </button>
+            <!-- <button class="update-button">Modifier</button> -->
+            <button class="btn btn-danger" data-toggle="modal" data-target="#myModal" id="rvn" onclick="get(this)" name="<%= json[i].id %>" > Edit // <%= json[i].id %> </button>
+          </div>
+        </div>
+        <%}%> <%}%>
+      </div>
+      <a href="/home" class="btn btn-primary"> Ajouter</a>
+<br>
+<br>
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h1 class="modal-title">Modifier la voiture</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+                           <form action="/up" method="post">
+         <div class="form-group">
+         	<input type="text" id="vv" name="id" value="" >
+                                <!-- <label for="exampleInputPassword1">Product image</label> -->
+                                <input class="form-control"  class="form-control is-valid" name="name" required="on" value="<%=json[i].name%>">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="exampleInputPassword1">Product Name</label> -->
+                                <input class="form-control" class="form-control is-valid" name="carburant" id="title" required="on" value="<%=json[i].carburant%>">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="exampleInputPassword1">Price</label> -->
+                                <input class="form-control" class="form-control is-valid" name="climatisation" id="author" required="on" value="<%=json[i].climatisation%>">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label for="exampleInputPassword1">Price</label> -->
+                                <input class="form-control" class="form-control is-valid" name="price" id="author" required="on" value="<%=json[i].price%>">
+                            </div>
+                             <button type="submit" class="btn btn-danger">submit</button>
+        </div>
+               </form>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </aside>
+
+    <footer>
+      
+    </footer>
+
+    <script>
+      var cc = document.getElementById("vv");
+           function get(ev) {
+	    let bn = ev.name;
+	    console.log(bn);
+           
+            cc.value = bn;
+           
+}
+    </script>
+  </body>
+</html>

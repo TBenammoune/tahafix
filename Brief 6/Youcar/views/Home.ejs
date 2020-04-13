@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-class">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">YouCar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="/"
+                >Acceuil<span class="sr-only">(current)</span></a
+              >
+              <a class="nav-item nav-link" href="#">Notre voitures</a>
+              <a class="nav-item nav-link" href="#">Réservetion</a>
+              <a class="nav-item nav-link" href="#">Contactez-nouz</a>
+              <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header-class" >
+        <h1>YouCar <span>location de voitures</span></h1>
+      </div>
+    </header>
+
+      <h1 style="text-align: center;"> Ajouter Voiture </h1>
+      <br />
+
+      <div class="form-ajt-voiture" style="width: 50%; margin: 3px auto; text-align: center;">
+        <div class="form-ajt-voiture">
+          <form action="/" method="post">
+            <div class="form-input">
+              <input
+                  style="display: none;"
+                  type="text"
+                  name="id"
+                  class="form-control"
+                  id="validationServer02"
+                  value="<%=json.length+1%>"
+                  placeholder="Nom de la voiture"
+                  required
+                />
+                <br>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="validationServer02"
+                  placeholder="Nom de la voiture"
+                  required
+                />
+                <br>
+                <input
+                  type="text"
+                  name="carburant"
+                  class="form-control"
+                  id="validationServer02"
+                  placeholder="Genre de carburant"
+                  required
+                />
+                <br>
+                <input
+                  type="text"
+                  name="climatisation"
+                  class="form-control"
+                  id="validationServer02"
+                  placeholder="La climatisation disponible?"
+                  required
+                />
+                <br>
+                <input
+                  type="text"
+                  name="price"
+                  class="form-control"
+                  id="validationServer02"
+                  placeholder="Enter le prix de location"
+                  required
+                />
+                <br>
+                <button class="btn btn-success" type="submit">Ajouter la voiture</button>
+            </div>
+          </form>
+      </div>
+    <br />
+    <footer class="footer">
+      <span class="S1"> &copy; Copyright 2020. All Right Reserved</span>
+    </footer>
+  </body>
+</html>

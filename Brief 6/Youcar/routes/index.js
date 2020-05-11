@@ -28,19 +28,7 @@ router.post('/', (req, res) => {
   res.redirect('/');
 });
 
-/*router.put('/', (req, res) => {
 
-  var info = req.body;
-  json.push(info);
-
-  // saving the array in a file
-  const data = JSON.stringify(json);
-  fs.writeFileSync('voitures.json', data, 'utf-8');
-
-  res.redirect('/');
-});*/
-
-//////
 
 router.get('/delete/:id', (req, res) => {
   json = json.filter(d => d.id != req.params.id);

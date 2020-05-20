@@ -234,6 +234,9 @@ body{
   background-repeat: no-repeat;
 }
 
+.idfix{
+  display: flex;
+}
 
 /* footer */
 
@@ -291,6 +294,7 @@ body{
 }
 .divl div:nth-of-type(1) {
   text-align: center;
+  display: flex-root;
 }
 .divl div:nth-of-type(1) h1 {
   font-size: 25px;
@@ -298,16 +302,17 @@ body{
 }
 .divl div:nth-of-type(1) input {
   width: 460px;
-  height: 40px;
+  height: 29px;
+  border: none;
   margin-left: 230px;
 }
 .divl div:nth-of-type(1) button {
   width: 200px;
-  height: 40px;
+  height: 32px;
   background-color: #C49D48;
   border: none;
   color: white;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 /* Menu media query */
@@ -396,3 +401,4 @@ body{
     left: -50%;
 
 }
+

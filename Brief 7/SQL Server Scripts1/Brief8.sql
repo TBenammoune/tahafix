@@ -77,24 +77,17 @@ create table Product
 /* Sign-in                                           */
 /*==============================================================*/
 
-create login root13
-with PassWord='youcode';
+create user 'user1' identified by 'pass123'; 
 
-/*user*/
-create user root13 for login root13;
+GRANT ALL PRIVILEGES ON *.* TO 'user1';
 
 
-grant all to root13;
+
+create user 'user3' identified by 'pass12345';
+
+GRANT DELETE ON *.* TO 'user3';
 
 
-/*Grant option or allow option*/
 
-create login utilisateur
-with PassWord='youcode1';
-
-
-/*user*/
-create user utilisateur for login utilisateur;
-
-
-grant insert,delete to utilisateur;
+/* affichage Users */
+select user from mysql.user;

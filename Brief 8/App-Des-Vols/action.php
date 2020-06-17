@@ -92,9 +92,12 @@ $flyingFrom= $readRow[13];
 $flyingTo= $readRow[14];
 $seats=$readRow[18];
 }
-  //Modifier seats in table flights_list;
+//Récupère une ligne de données à partir du jeu de résultats représenté par result et le retourne en tant que tableau indexé, où chaque colonne est une case du tableau,
+  
+//Modifier seats in table flights_list;
   $modifier=false;
-  if( isset($_GET["seats"]) &&  isset($_GET["idAir"]) ){
+  //it has to be declared and is not NULL
+  if( isset($_GET["seats"]) &&  isset($_GET["idAir"]) ){ 
     $seats=$_GET["seats"];
     $idAir=$_GET["idAir"];
      $update= "UPDATE flights_list set seats=seats-$seats where id=$idAir";

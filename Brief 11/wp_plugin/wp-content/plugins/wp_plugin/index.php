@@ -2,9 +2,9 @@
 /*
 Plugin Name: My Plugin
 Plugin URI: 
-Description: First Plugin 
-Version: 0.0.1
-Author: TAHA
+Description: First Plugin To insert
+Version: 0.1
+Author: TAHA and Hachimi
 Author URI: https://wp_plugin.com/wordpress-my-plugins/
 License: GPLv2 or later
 */

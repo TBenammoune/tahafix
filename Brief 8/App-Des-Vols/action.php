@@ -56,22 +56,22 @@ text-align: center;'> Welcome To Morocco AirLines  From ". $flying_from ." To ".
 
 
    //showing the final details for reservation
-$id_reserver="";
-$IdReservation="";
-$fullName= "";
-$numTelephone="";
-$email= "";
-$numPassport="";
-$departingDate= "";
-$returningDate="";
-$Adult= "";
-$children="";
-$TravelClass= "";
-$Price= "";
-$flyingFrom= "";
-$flyingTo= "";
-$seats= "";
-$idAir="";
+// $id_reserver="";
+// $IdReservation="";
+// $fullName= "";
+// $numTelephone="";
+// $email= "";
+// $numPassport="";
+// $departingDate= "";
+// $returningDate="";
+// $Adult= "";
+// $children="";
+// $TravelClass= "";
+// $Price= "";
+// $flyingFrom= "";
+// $flyingTo= "";
+// $seats= "";
+// $idAir="";
 $request="select *, (Adult+children) as 'seats' from reservation,flights_list where flights_list.id=reservation.id_flight  AND reservation.id_reservation='$lastId'";
 $fetchRow=request($request);
 if(isset($fetchRow)){

@@ -4,7 +4,7 @@ Plugin Name: My Plugin
 Plugin URI: 
 Description: First Plugin To insert
 Version: 0.1
-Author: TAHA and Hachimi
+Author: TAHA,Hachimi
 Author URI: https://wp_plugin.com/wordpress-my-plugins/
 License: GPLv2 or later
 */
@@ -21,7 +21,7 @@ function addMenu() {
 
 
 function MonPlugin_index(){
-  require_once( dirname( dirname( dirname( dirname( __FILE__ )))) . '/wp-load.php' );
+  // require_once( dirname( dirname( dirname( dirname( __FILE__ )))) . '/wp-load.php' );
   global $wpdb;
   if(isset($_POST['submit'])){
       $option=$_POST['option'];

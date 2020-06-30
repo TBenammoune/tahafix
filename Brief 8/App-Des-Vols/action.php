@@ -1,7 +1,8 @@
 <?php
 include 'config.php';
+
 //affiche
-if($_SERVER["PHP_SELF"]==='/Application-pour-la-gestion-des-r-servations-des-vols-a-riens/home.php'){
+if($_SERVER["PHP_SELF"]==='/App-Des-Vols/home.php'){
 $query = "SELECT DISTINCT flyingFrom, flyingTo from flights_list;";
 $l=request($query);
  $rows=mysqli_num_rows($l);
@@ -43,7 +44,7 @@ text-align: center;'> Welcome To Morocco AirLines  From ". $flying_from ." To ".
     $travel_class=$_POST["travel_class"];
     $price=$_POST["price"];
     $idAir=$_POST["id_air"];
-    $_SESSION["id"]=$_POST["id_reserver"];
+    
     $request="INSERT INTO `reservation` VALUES($id_reservation,'$fullName','$phone','$email','$num_passport','$departing','$returning',$adults,$children,'$travel_class','$price','$idAir')";
     if(mysqli_query($con,$request)){
       $lastId=mysqli_insert_id($con);
@@ -56,27 +57,27 @@ text-align: center;'> Welcome To Morocco AirLines  From ". $flying_from ." To ".
 
 
    //showing the final details for reservation
-// $id_reserver="";
-// $IdReservation="";
-// $fullName= "";
-// $numTelephone="";
-// $email= "";
-// $numPassport="";
-// $departingDate= "";
-// $returningDate="";
-// $Adult= "";
-// $children="";
-// $TravelClass= "";
-// $Price= "";
-// $flyingFrom= "";
-// $flyingTo= "";
-// $seats= "";
-// $idAir="";
+$id_reserver="";
+$IdReservation="";
+$fullName= "";
+$numTelephone="";
+$email= "";
+$numPassport="";
+$departingDate= "";
+$returningDate="";
+$Adult= "";
+$children="";
+$TravelClass= "";
+$Price= "";
+$flyingFrom= "";
+$flyingTo= "";
+$seats= "";
+$idAir="";
 $request="select *, (Adult+children) as 'seats' from reservation,flights_list where flights_list.id=reservation.id_flight  AND reservation.id_reservation='$lastId'";
 $fetchRow=request($request);
 if(isset($fetchRow)){
-$readRow=mysqli_fetch_row($fetchRow);
-$IdReservation=$readRow[0];
+$readRow=mysqli_fetch_array($fetchRow);
+$IdReservation=$readRow["id"];
 $fullName= $readRow[1];
 $numTelephone=$readRow[2];
 $email= $readRow[3];
@@ -92,12 +93,9 @@ $flyingFrom= $readRow[13];
 $flyingTo= $readRow[14];
 $seats=$readRow[18];
 }
-//Récupère une ligne de données à partir du jeu de résultats représenté par result et le retourne en tant que tableau indexé, où chaque colonne est une case du tableau,
-  
-//Modifier seats in table flights_list;
+  //Modifier seats in table flights_list;
   $modifier=false;
-  //it has to be declared and is not NULL
-  if( isset($_GET["seats"]) &&  isset($_GET["idAir"]) ){ 
+  if( isset($_GET["seats"]) &&  isset($_GET["idAir"]) ){
     $seats=$_GET["seats"];
     $idAir=$_GET["idAir"];
      $update= "UPDATE flights_list set seats=seats-$seats where id=$idAir";

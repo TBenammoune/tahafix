@@ -1,6 +1,5 @@
 <?php
 include 'action.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +40,8 @@ include 'action.php';
         <?php if($modifier==true){
      die("<div id='messageConfirmation' class='add' >Bien Confirmer $fullName <a href='about_us.php' >Show More !</a>");
  }
-        if($ajouter):
+     echo " <div id='messageConfirmation1' class='add' >Bien Confirmer $fullName <a href='about_us.php' >Show More !</a></div> <hr> ";
+           if($ajouter):
              echo "<div class='add'> Your welcome mister $fullName</div>";
         endif; ?>
         <br>
@@ -67,7 +67,6 @@ include 'action.php';
           <p> Seats children : <strong> <?php echo $children;?></strong></p>
           <p> travel class: <strong> <?php echo $TravelClass;?></strong></p>
           <p> price : <strong> <?php echo $Price;?></strong></p>
-          <div id="c_bien_confirm"><a href="confirmer.php?idAir=<?php echo $idAir;?>&seats=<?php echo $seats ;?>" name="congirmer" id="confirmer">Confirmer</a></div>
           </div>
         </div>
 
@@ -98,8 +97,5 @@ include 'action.php';
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
         <script src="script.js"></script>
-        <script>
-
-        </script>
     </body>
 </html>

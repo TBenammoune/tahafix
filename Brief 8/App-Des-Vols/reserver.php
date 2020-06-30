@@ -1,5 +1,5 @@
 <?php
-include 'action.php';
+include 'action2.php';
 ?>
 
 <!DOCTYPE html>
